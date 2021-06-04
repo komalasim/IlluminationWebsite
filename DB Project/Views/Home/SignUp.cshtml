@@ -1,0 +1,204 @@
+﻿@{
+    Layout = null;
+}
+@model  string
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/SignUpStyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+
+        function CheckAlphabets(field, errormessage) {
+            var checkname = /^[a-zA-Z]+$/;
+            if (field.value.match(checkname))
+                return true;
+            else {
+                document.getElementById('p1').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+        }
+
+        function CheckLength(field, minlen, maxlen, errormessage) {
+            var checklength = field.value;
+
+            if (checklength < minlen || checklength > maxlen) {
+                document.getElementById('p6').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        function TextAlphanumeric(field, errormessage) {
+            var alphaExp = /^[0-9a-zA-Z]+$/;
+
+            if (field.value.match(alphaExp))
+                return true;
+            else {
+                document.getElementById('p4').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+        }
+
+        function TextNumeric(field, errormessage) {
+            var numericExp = /^[0-9]+$/;
+
+            if (field.value.match(numericExp))
+                return true;
+            else {
+                document.getElementById('p6').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+        }
+
+        function PasswordIsSame(field1, field2, errormessage) {
+            var pwd = field1.value;
+            var rpwd = field2.value;
+
+            if (pwd != rpwd) {
+                document.getElementById('p7').innerText = errormessage;
+                field2.focus();
+                return false;
+            }
+            else
+                return true;
+        }
+
+        function EmailValidation(field, errormessage) {
+            var emailExp = /^[a-zA-Z0-9._-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (field.value.match(emailExp))
+                return true;
+            else {
+                document.getElementById('p3').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+        }
+
+        function Check_CheckBox() {
+            var count = 0;
+
+            if (document.getElementById('checkF').checked == true)
+                count++;
+            else if (document.getElementById('checkM').checked == true)
+                count++;
+
+            if (count == 0) {
+                text.style.display = "block";
+                return false;
+            }
+            else {
+                text.style.display = "none";
+                return true;
+            }
+        }
+
+        function FormValidation() {
+            var firstname = document.getElementById('firstname');
+            var lastname = document.getElementById('lastname');
+            var email = document.getElementById('email');
+            var address = document.getElementById('address');
+            var phone = document.getElementById('phone');
+            var password = document.getElementById('password');
+            var repeatpassword = document.getElementById('repeatpassword');
+
+            if (firstname.value.length == 0) {
+                document.getElementById('head').innerText = "* All Fields Are Mandatory! *";
+                firstname.focus();
+                return false;
+            }
+
+            if (CheckAlphabets(firstname, "Invalid Input! Use alphabets only!")) {
+                if (CheckAlphabets(lastname, "Invalid Input! Use alphabets only!")) {
+                    if (Check_CheckBox()) {
+                        if (EmailValidation(email, "Invalid Email Address!")) {
+                            if (CheckLength(phone, 11, 11, "Invalid Phone Number!")) {
+                                if (TextNumeric(phone, "Invalid Phone Number!")) {
+                                    if (CheckLength(password, 8, 20, "Password length is incorrect!")) {
+                                        if (PasswordIsSame(password, repeatpassword, "Password is NOT same!")) {
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+    </script>
+</head>
+<body>
+    <form method="POST" action="../Home/UserSignUp">
+        <div class="container">
+            <p id="head"></p>
+            <div>
+                <h1>Illumination</h1>
+                <img src="~/Content/logo.png" class="logo" />
+                <div class="navbar">
+                    <a href="http://localhost:10587/Home/Home">Home</a>
+                    <a href="http://localhost:10587/Home/RequestaBook">Request A Book</a>
+                    <a href="http://localhost:10587/Home/DisplayCart">View Cart</a>
+                    <a href="http://localhost:10587/Home/FAQ">FAQ</a>
+                    <a href="http://localhost:10587/Home/Recommendations">Recommendations</a>
+                </div>
+                <hr style="color:brown" />
+            </div>
+            <div><h2>Sign Up</h2></div>
+            <h3>
+                <input type="text" class="firstname" name=fname id=fname placeholder="Enter First Name" required="required" />
+                <p id="p1"></p>
+                <input type="text" class="lastname" name=lname id="lname" placeholder="Enter Last Name" required="required" />
+                <p id="p2"></p>
+                <input type="radio" style="position: absolute; top: 355px; right: 690px;" id=check name=check value="M" class="genderF" />
+                <input type="radio" style="position: absolute; top: 355px; right: 630px;" id=check name=check value="F" class="genderM" />
+                <p style="font-size: 1.5em; position: absolute; color: #cc6900; top: 320px; right: 710px; ">M</p>
+                <p style="font-size: 1.5em; position: absolute; color: #cc6900; top: 320px; right: 650px; ">F</p>
+                <p style="font-size: 1.5em; position: absolute; color: #cc6900; top: 320px; right: 762px">Select Gender:</p>
+                <p id="text" style="display:none">Checkbox is NOT checked!</p>
+                <input type="text" class="email" name=email id=email placeholder="           Enter Email" required="required" />
+                <p id="p3"></p>
+                <input type="text" class="address" name=address id=address placeholder="         Enter Address" required="required" />
+                <p id="p4"></p>
+                <input type="tel" class="phone" name=phone id=phone placeholder="Enter Phone Number" required="required" />
+                <p id="p5"></p>
+                <input type="password" class="password" name=password id=password placeholder="Enter Password" required="required" />
+                <p id="p6"></p>
+                <input type="password" class="repeatpassword" name=confirm id=confirm placeholder="Repeat Password" required="required" />
+                <p id="p7"></p>
+                <div class="signup">
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <input type="submit" name="signup" id="signup" class="register" value="Create Account" />
+                    <br>
+                    <label>@Model</label>
+                </div>
+            </h3>
+            <h4 class="tac1">By clicking this button, you agree to our</h4><a href="#"><h5 class="tac2">Terms and Conditions.</h5></a>
+            <img src="~/Content/img3.jpg" class="bottomblock" />
+            <div class="contactus">
+                About Us<br />
+            </div>
+            <a href="http://localhost:10587/Home/Home"><p class="sub1">Contact Us</p></a><br />
+            <a href="http://localhost:10587/Home/TermsAndConditions"><p class="sub2">Terms and Conditions</p></a><br />
+            <div class="connect">
+                Connect<br /><br />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                <a href="#" onclick="location.href='http://www.facebook.com'" class="fa fa-facebook"></a>
+                <a href="#" onclick="location.href='http://www.twiiter.com'" class="fa fa-twitter"></a>
+                <a href="#" onclick="location.href='http://www.instagram.com'" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

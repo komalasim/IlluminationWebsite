@@ -1,0 +1,81 @@
+﻿@{
+
+    Layout = null;
+}
+@model  string
+
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <link href="~/Content/FAQStylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container" id="form">
+        <p id="head"></p>
+        <form id="formS" action="../Home/SearchBook" method="post">
+            <p class="searchheading">
+                <input type="text" placeholder="Search Title / Authour" class="search" name='SEARCH' id='SEARCH' required="required" /><span class="error"></span>
+                <input type="submit" name="submitbuttom" id="submitbutton" class="register" value="Search" form="formS" />
+                <label for="submitbutton">
+                    <img src="~/Content/searchicon.png" class="searchicon" />
+                </label>
+            </p>
+        </form>
+    </div>
+        <div class="container">
+            <div>
+                <h1>Illumination</h1>
+                <img src="~/Content/logo.png" class="logo" />
+                <div class="navbar">
+                    <a href="http://localhost:10587/Home/Home">Home</a>
+                    <a href="http://localhost:10587/Home/RequestaBook">Request A Book</a>
+                    <a href="http://localhost:10587/Home/DisplayCart">View Cart</a>
+                    <a href="http://localhost:10587/Home/FAQ">FAQ</a>
+                    <a href="http://localhost:10587/Home/Recommendations">Recommendations</a>
+                </div>
+                <hr />
+                <br />
+                <p style="font-family:'Book Antiqua'; font-size:1.17em; font-style:inherit"></p>
+                <div style="font-size: 1.12em">
+                    <div><h2>FAQ</h2></div>
+                    <br />
+                    <p>We have penned down in detail all Help topics under their appropriate headings. Please read them carefully if you want to place an order with us. In this section, we have only answered the questions which remain unanswered in the main Help section and our customers ask from time to time. If you still have some unanswered questions, please email us at query@illumination.com.pk.</p>
+                    &nbsp<h4>1. How long does it take to deliver an order?</h4>
+                    &nbsp<p>It takes 3 to 5 business days to deliver an order if the ordered product is readily available in our warehouse.</p>
+
+                    &nbsp &nbsp<h4>2. Do you deliver books outside Pakistan?</h4>
+                    &nbsp<p>No, we do not deliver books outside Pakistan at the moment.</p>
+
+                    &nbsp &nbsp<h4>3. Can I request any book?</h4>
+                    &nbsp<p>You can request any book in English published in Pakistan or abroad or any local book in English, Urdu and Punjabi at the moment. We will try our utmost to get it for you but it may not be possible if it is not available with any of our suppliers.</p>
+
+                    &nbsp &nbsp<h4>4. What are the delivery charges?</h4>
+                    &nbsp<p>We provide Free Home Delivery across Pakistan.</p>
+
+                    &nbsp &nbsp<h4>5. What are my payment options?</h4>
+                    &nbsp<p>Currently,We offer Cash on Delivery only.</p>
+
+                    &nbsp &nbsp<h4>6. I added an ‘Available’ title to my cart but now it appears out of stock/not available in my cart. Why was it not reserved for me?</h4>
+                    &nbsp<p>Adding a title to your cart does not mean that it is reserved for you. Illumination has multiple sales operations going on all the time. Multiple online customers may add an ‘Available’ title to their carts. We cater our customers on ‘First Come, First Serve’ basis so it may go out of stock before you order it. A title is only reserved for you when you have placed an order for it.</p>
+
+                    &nbsp &nbsp<h4>7. How do I cancel an order or return an item?</h4>
+                    &nbsp<p>There are a few important things to keep in mind when returning a product you have purchased from Illumination Online Store. Please ensure that the item you are returning is repacked with the original invoice/receipt. We will only exchange any product(s), if the product(s) received has any kind of defect or if the wrong product has been delivered to you. Contact us by emailing us images of the defected product at query@illumination.com.pk within 3 days from the date you received your order. Please note that the product must be unused with the price tag attached. Once our team has reviewed the defected product, an exchange will be offered for the same amount.</p>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp
+                    <br />
+                </div>
+                <img src="~/Content/img3.jpg" class="bottomblock" />
+                <div class="contactus">
+                    About Us<br />
+                    <a href="http://localhost:10587/Home/Home"><p class="subs">Contact Us</p></a>
+                    <a href="http://localhost:10587/Home/TermsAndConditions"><p class="subs">Terms and Conditions</p></a>
+                </div>
+                <div class="connect">
+                    Connect<br /><br />
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                    <a href="#" onclick="location.href='http://www.facebook.com'" class="fa fa-facebook"></a>
+                    <a href="#" onclick="location.href='http://www.twiiter.com'" class="fa fa-twitter"></a>
+                    <a href="#" onclick="location.href='http://www.instagram.com'" class="fa fa-instagram"></a>
+                </div>
+            </div>
+        </div>
+</body>

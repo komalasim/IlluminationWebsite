@@ -1,0 +1,206 @@
+    h1
+    {
+        font-size: 1.8em;
+        text-align: left;
+        color: white;
+        font-family:'Bookman Old Style';
+    }
+
+    h2
+    {
+        font-size: 2.0em;
+        position: absolute;
+        top: 195px;
+        right: 210px;
+        text-align: right;
+        color: black;
+        font-family: 'Baskerville Old Face';
+    }
+
+    .email
+    {
+        color: black;
+        padding: 10px 80px;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        background-color:wheat;
+        border: solid;
+        border-color: azure;
+    }
+
+    .password
+    {
+        color: black;
+        padding: 10px 80px;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        background-color:wheat;
+        border: solid;
+        border-color: azure;
+    }
+
+    p 
+    {
+        display: inline-block;
+        color: white;
+        text-align:left;
+        margin: 0;
+    }
+
+    .loginbutton
+    {
+        background-color: #cc6900;
+        border: none;
+        color: white;
+        padding: 16px 152px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    body
+    {
+        background-image: url("images.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .firstbook
+    {
+        position: absolute;
+        top: 300px;
+        right: 50px;
+        height: auto;
+    }
+
+    .secondbook
+    {
+        position: relative;
+        top: 180px;
+        right: 280px;
+        transform: rotate(-15deg);
+    }
+
+    .bottomblock
+    {
+        position: absolute;
+        bottom: -350px;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+    }
+
+    .contactus
+    {
+        position: absolute;
+        bottom: -245px;
+        left: 16px;
+        font-size: 1.5em;
+        font-family: 'Baskerville Old Face';
+        color: blanchedalmond;
+    }
+
+    .subs
+    {
+        font-size: 0.75em;
+        font-family: 'Baskerville Old Face';
+        color: white;
+    }
+
+    .connect
+    {
+        position: absolute;
+        bottom: -253px;
+        left: 300px;
+        font-size: 1.5em;
+        font-family: 'Baskerville Old Face';
+        color: blanchedalmond;
+    }
+
+    .fa 
+    {
+        padding: 7px;
+        font-size: 10px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+
+    .fa:hover 
+    {
+        opacity: 0.7;
+    }
+
+    .fa-facebook 
+    {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-twitter 
+    {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .fa-instagram
+    {
+        background: #1a75ff;
+        color: white;
+    }
+
+    .signup
+    {
+        font-family:'Baskerville Old Face';
+        font-size: 1.6em;
+        color: white;
+        position: absolute;
+        bottom: -6px;
+        left: 60px;
+    }
+
+    .registerbutton
+    {
+        background-color: #cc6900;
+        border: none;
+        color: white;
+        padding: 12px 28px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        left: 450px;
+    }
+
+     .logo
+    {
+        position: relative;
+        left: 198px;
+        top: -55px;
+    }
+	
+	.navbar
+	{
+		overflow: hidden;
+	}
+	
+	.navbar a
+	{
+		float: left;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 1.25em;
+		font-family: 'Baskerville Old Face';
+	}
+	
+	.navbar a:hover
+	{
+		background-color: #ddd;
+		color: black;
+	}

@@ -1,0 +1,131 @@
+﻿@{
+    Layout = null;
+}
+@model string
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/LoginStyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        var txt1 = document.getElementById("txt1");
+        txt1.addEventListener("input", ValidateName);
+
+        function CheckAlphabets(field, errormessage) {
+            var checkname = /^[a-zA-Z]+$/;
+            if (field.value.match(checkname))
+                return true;
+            else {
+                document.getElementById('p1').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+        }
+
+        function CheckLength(field, minlen, maxlen, errormessage) {
+            var checklength = field.value;
+
+            if (checklength < minlen || checklength > maxlen) {
+                document.getElementById('p6').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        function EmailValidation(field, errormessage) {
+            var emailExp = /^[a-zA-Z0-9._-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            if (field.value.match(emailExp))
+                return true;
+            else {
+                document.getElementById('p3').innerText = errormessage;
+                field.focus();
+                return false;
+            }
+        }
+
+        function FormValidation() {
+            var email = document.getElementById('email');
+            var password = document.getElementById('password');
+
+            if (email.value.length == 0) {
+                document.getElementById('head').innerText = "* All Fields Are Mandatory! *";
+                email.focus();
+                return false;
+            }
+
+            if (EmailValidation(email, "Invalid Email Address!")) {
+                if (CheckLength(password, 8, 20, "Password length is incorrect!"))
+                    return true;
+            }
+
+            return false;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container" id="form">
+        <p id="head"></p>
+    </div>
+    <form method="POST" action="../Home/UserLogin" onkeypress="return FormValidation()">
+            <div>
+                <h1>Illumination</h1>
+                <img src="~/Content/logo.png" class="logo" />
+                <div class="navbar">
+                    <a href="http://localhost:10587/Home/Home">Home</a>
+                    <a href="http://localhost:10587/Home/RequestaBook">Request A Book</a>
+                    <a href="http://localhost:10587/Home/DisplayCart">View Cart</a>
+                    <a href="http://localhost:10587/Home/FAQ">FAQ</a>
+                    <a href="http://localhost:10587/Home/Recommendations">Recommendations</a>
+                </div>
+                <hr />
+                <h2>New Releases!</h2>
+                <div>
+                    <img style="float: right" src="~/Content/img1.jpg" class="firstbook" />
+                    <img style="float: right" src="~/Content/img2.jpg" class="secondbook" />
+                </div>
+                <br /><br /><br /><br /><br /><br /><br /><br />
+                <p style="font-family:'Book Antiqua'; font-size:1.17em; font-style:inherit"></p>
+                <h3>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" id="email" name="email" class="email" placeholder="Enter Email or Username" onkeypress="return ValidateName(event)" required="required" /><span class="error"></span>
+                    <br />
+                    <br />
+                    &nbsp &nbsp &nbsp &nbsp &nbsp <input type="password" id="password" name="password" class="password" placeholder="Enter Password" required="required" /><span class="error"></span>
+                </h3>
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="checkbox" checked="checked" name="remember" />
+                <p style="font-size:1.19em">Remember Me</p>
+                <br />
+                <br />
+                <div class="login">
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <input type="submit" name="signin" id="signin" class="loginbutton" value="Log in" />
+                    <br>
+                    <label>@Model</label>
+                </div>
+            </div>
+            <div class="signup">Not a member? Register Now!</div>
+            <div class="register">
+                <br /><br /><br /><br /><br />
+                &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <button onclick="location.href = 'http://localhost:10587/Home/SignUp'" type="button" class="registerbutton">SIGN UP</button>
+            </div>
+            <img src="~/Content/img3.jpg" class="bottomblock" />
+            <div class="contactus">
+                About Us<br />
+                <a href="http://localhost:10587/Home/Home"><p class="sub1">Contact Us</p></a><br />
+                <a href="http://localhost:10587/Home/TermsAndConditions"><p class="sub2">Terms and Conditions</p></a><br />
+            </div>
+            <div class="connect">
+                Connect<br /><br />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                <a href="#" onclick="location.href='http://www.facebook.com'" class="fa fa-facebook"></a>
+                <a href="#" onclick="location.href='http://www.twiiter.com'" class="fa fa-twitter"></a>
+                <a href="#" onclick="location.href='http://www.instagram.com'" class="fa fa-instagram"></a>
+            </div>
+    </form>
+</body>
+</html>

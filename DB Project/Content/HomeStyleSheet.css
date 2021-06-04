@@ -1,0 +1,293 @@
+	body
+	{
+		background-image: url("rbgimg.jpg");
+		background-repeat: no-repeat;
+		background-size: static;
+	}
+
+	h1
+	{
+		font-size: 1.8em;
+		text-align: left;
+		color: white;
+		font-family:'Bookman Old Style';
+	}
+	
+	h2
+	{
+		position: absolute;
+		font-size: 1.8em;
+		left: 240px;
+		font-family: 'Bookman Old Style';
+	}
+	
+	.bookimg1
+	{
+		position: absolute;
+		left: 250px;
+		top: 290px;
+	}
+	
+	.bookimg2
+	{
+		position: absolute;
+		left: 425px;
+		top: 290px;
+	}
+	
+	.bookimg3
+	{
+		position: absolute;
+		left: 600px;
+		top: 290px;
+	}
+	
+	.bookimg4
+	{
+		position: absolute;
+		left: 775px;
+		top: 290px;
+	}
+	
+	.bookimg5
+	{
+		position: absolute;
+		left: 950px;
+		top: 290px;
+	}
+	
+	.bookimg6
+	{
+		position: absolute;
+		left: 1125px;
+		top: 290px;
+	}
+	
+	.bookimg7
+	{
+		position: absolute;
+		left: 250px;
+		top: 540px;
+	}
+	
+	.bookimg8
+	{
+		position: absolute;
+		left: 425px;
+		top: 540px;
+	}
+	
+	.bookimg9
+	{
+		position: absolute;
+		left: 600px;
+		top: 540px;
+	}
+	
+	.bookimg10
+	{
+		position: absolute;
+		left: 775px;
+		top: 540px;
+	}
+	
+	.bookimg11
+	{
+		position: absolute;
+		left: 950px;
+		top: 540px;
+	}
+	
+	.bookimg12
+	{
+		position: absolute;
+		left: 1125px;
+		top: 540px;
+	}
+
+	.sidebar 
+	{
+	  height: 94%; 
+	  width: 200px;
+	  position: absolute; 
+	  z-index: 1; 
+	  top: 170px; 
+	  left: 0;
+	  background-color: saddlebrown;
+	  padding-top: 20px;
+	}
+	
+	.address
+	{
+		font-size: 1em;
+		color: white;
+	}
+
+	.sidebar a 
+	{
+	  display: block;
+	  color: white;
+	  padding: 16px;
+	  text-decoration: none;
+	}
+
+	.sidebar a.active 
+	{
+	  background-color: #4CAF50;
+	  color: white;
+	  font-size: 1.5em;
+	}
+	
+	.sidebar a.notactive 
+	{
+	  background-color: grey;
+	  color: white;
+	  font-size: 1.2em
+	}
+	
+	.bottomblock
+    {
+        position: absolute;
+        bottom: -350px;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+    }
+	
+	.contactus
+    {
+        position: absolute;
+        bottom: -295px;
+        left: 16px;
+        font-size: 1.5em;
+        font-family: 'Baskerville Old Face';
+        color: darkblue;
+    }
+	
+    .subs
+    {
+        font-size: 0.75em;
+        font-family: 'Baskerville Old Face';
+        color: black;
+    }
+	
+	a
+	{
+		text-decoration: none;
+	}
+
+    .connect
+    {
+        position: absolute;
+        bottom: -263px;
+        left: 300px;
+        font-size: 1.5em;
+        font-family: 'Baskerville Old Face';
+        color: darkblue;
+    }
+
+    .fa 
+    {
+        padding: 7px;
+        font-size: 10px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+
+    .fa:hover 
+    {
+        opacity: 0.7;
+    }
+
+    .fa-facebook 
+    {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-twitter 
+    {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .fa-instagram
+    {
+        background: #1a75ff;
+        color: white;
+    }
+
+    .logo
+    {
+        position: relative;
+        left: 198px;
+        top: -55px;
+    }
+	
+	.search
+    {
+        float: right;
+        padding: 6px 25px;
+        border: none;
+        border-radius: 5px;
+        border-color: aquamarine;
+        text-align: left;
+        margin-top: -40px;
+        margin-right: 65px;
+        font-size: 17px;
+    }
+	
+	.register
+	{
+		float: right;
+		margin-right: 0px;
+		margin-top: -30px;
+		display: none;
+	}
+	
+	.searchicon
+	{
+		float: right;
+		margin-right: 0px;
+		margin-top: -40px;
+	}
+
+    .searchheading
+    {
+		position: absolute;
+		font-size: 1.5em;
+		right: 60px;
+		top: 40px;
+		color: white;
+    }
+	
+	.navbar
+	{
+		overflow: hidden;
+	}
+	
+	.navbar a
+	{
+		float: left;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 1.25em;
+		font-family: 'Baskerville Old Face';
+	}
+	
+	.navbar a:hover
+	{
+		background-color: #ddd;
+		color: black;
+	}
+		
+	.idbutton
+	{
+		position: absolute;
+		top: 290px;
+		left: 250px;
+	}

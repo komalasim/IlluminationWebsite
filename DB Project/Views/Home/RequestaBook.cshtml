@@ -1,0 +1,123 @@
+﻿@{
+    Layout = null;
+}
+@model  string
+
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <link href="~/Content/DisplayCartStyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+    .email 
+    {
+        padding: 14px 178px;
+        font-size: 0.85em;
+        border-color: #cc6900;
+        position: absolute;
+        top: 330px;
+        left: 410px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .title 
+    {
+        padding: 14px 178px;
+        font-size: 0.85em;
+        border-color: #cc6900;
+        position: absolute;
+        top: 400px;
+        left: 410px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .author 
+    {
+        padding: 14px 178px;
+        font-size: 0.85em;
+        border-color: #cc6900;
+        position: absolute;
+        top: 470px;
+        left: 410px;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .submit 
+    {
+        background-color: #cc6900;
+        border: none;
+        color: white;
+        padding: 14px 178px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.85em;
+        text-align: center;
+        position: absolute;
+        top: 600px;
+        left: 410px;
+        border-radius: 10px;
+        width: 40%;
+    }
+</style>
+<body>
+    <div class="container" id="form">
+        <p id="head"></p>
+        <form id="formS" action="../Home/SearchBook" method="post">
+            <p class="searchheading">
+                <input type="text" placeholder="Search Title / Authour" class="search" name='SEARCH' id='SEARCH' required="required" /><span class="error"></span>
+                <input type="submit" name="submitbuttom" id="submitbutton" class="register" value="Search" form="formS" />
+                <label for="submitbutton">
+                    <img src="~/Content/searchicon.png" class="searchicon" />
+                </label>
+            </p>
+        </form>
+    </div>
+    <form method="POST" action="../Home/UserRequestBook">
+            <div>
+                <h1>Illumination</h1>
+                <img src="~/Content/logo.png" class="logo" />
+                <div class="navbar">
+                    <a href="http://localhost:10587/Home/Home">Home</a>
+                    <a href="http://localhost:10587/Home/RequestaBook">Request A Book</a>
+                    <a href="http://localhost:10587/Home/DisplayCart">View Cart</a>
+                    <a href="http://localhost:10587/Home/FAQ">FAQ</a>
+                    <a href="http://localhost:10587/Home/Recommendations">Recommendations</a>
+                </div>
+                <hr />
+                <br /><br /><br />
+                <p style="font-family:'Book Antiqua'; font-size:1.17em; font-style:inherit"></p>
+                <div><h2>Request a book:</h2></div>
+                <br />
+                <br />
+                <br />
+                <p>If your desired book is not available with us, you can place a request for it by filling out the following form. Our team will respond you in the next 48 to 72 hours.</p>
+                <h3>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" style="text-align: center;" class="title" name='title' id='title' placeholder ="Enter Title" required="required" /><span class="error"></span><br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" style="text-align: center;" class="author" name='author' id='author' placeholder="Enter Author" required="required" /><span class="error"></span><br>
+                </h3>
+                <br />
+            </div>
+            <div class="login">
+                <button type="submit" class="requestbook" name="Request" id="Request" value="@Session["userId"].ToString()">Submit Request</button>
+                <br>
+            </div>
+                <br />
+                <img src="~/Content/img3.jpg" class="bottomblock" />
+                <div class="contactus">
+                    About Us<br />
+                    <a href=http://localhost:10587/Home/Home><p class="subs">Contact Us</p></a>
+                    <a href="http://localhost:10587/Home/TermsAndConditions"><p class="subs">Terms and Conditions</p></a>
+                </div>
+                <div class="connect">
+                    Connect<br /><br />
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                    <a href="#" onclick="location.href='http://www.facebook.com'" class="fa fa-facebook"></a>
+                    <a href="#" onclick="location.href='http://www.twiiter.com'" class="fa fa-twitter"></a>
+                    <a href="#" onclick="location.href='http://www.instagram.com'" class="fa fa-instagram"></a>
+                </div>
+    </form>
+</body>

@@ -1,0 +1,112 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/HomeStyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container" id="form">
+        <p id="head"></p>
+        <form id="formS" action="../Home/SearchBook" method="post">
+            <p class="searchheading">
+                <input type="text" placeholder="Search Title / Authour" class="search" name='SEARCH' id='SEARCH' required="required" /><span class="error"></span>
+                <input type="submit" name="submitbuttom" id="submitbutton" class="register" value="Search" form="formS" />
+                <label for="submitbutton">
+                    <img src="~/Content/searchicon.png" class="searchicon"/>
+                </label>
+            </p>
+        </form>
+    </div>
+            <form method="POST" action="../Home/DisplayBook">
+                <div>
+                    <h1>Illumination</h1>
+                    <img src="~/Content/logo.png" class="logo" />
+                    <div class="navbar">
+                        <a href="http://localhost:10587/Home/Home">Home</a>
+                        <a href="http://localhost:10587/Home/RequestaBook">Request A Book</a>
+                        <a href="http://localhost:10587/Home/DisplayCart">View Cart</a>
+                        <a href="http://localhost:10587/Home/FAQ">FAQ</a>
+                        <a href="http://localhost:10587/Home/Recommendations">Recommendations</a>
+                    </div>
+                    <hr style="color:brown" />
+                    <div class="sidebar">
+                        <a class="active">Contact Us</a><br /><br />
+                        <a class="notactive">Address</a>
+                        <p class="address">
+                            National University of Computer and Emerging Sciences.<br />
+                            Block B Faisal Town<br />Lahore, Punjab
+                        </p><br />
+                        <a class="notactive">Phone</a>
+                        <p class="address">(042) 111 128 128</p>
+                    </div>
+                    <h2>New Releases</h2>
+                    <input type="submit" id="button1" name="clickbook" value="1" class="bookimg1">
+                    <label for="button1" class="bookimg1">
+                        <img src="~/Content/1.jpg">
+                    </label>
+                    <input type="submit" id="button2" name="clickbook" value="2" class="bookimg2">
+                    <label for="button2" class="bookimg2">
+                        <img src="~/Content/2.jpg">
+                    </label>
+                    <input type="submit" id="button3" name="clickbook" value="3" class="bookimg3">
+                    <label for="button3" class="bookimg3">
+                        <img src="~/Content/3.jpg">
+                    </label>
+                    <input type="submit" id="button4" name="clickbook" value="4" class="bookimg4">
+                    <label for="button4" class="bookimg4">
+                        <img src="~/Content/4.jpg">
+                    </label>
+                    <input type="submit" id="button5" name="clickbook" value="5" class="bookimg5">
+                    <label for="button5" class="bookimg5">
+                        <img src="~/Content/5.jpg">
+                    </label>
+                    <input type="submit" id="button6" name="clickbook" value="6" class="bookimg6">
+                    <label for="button6" class="bookimg6">
+                        <img src="~/Content/6.jpg">
+                    </label>
+                    <input type="submit" id="button7" name="clickbook" value="7" class="bookimg7">
+                    <label for="button7" class="bookimg7">
+                        <img src="~/Content/7.jpg">
+                    </label>
+                    <input type="submit" id="button8" name="clickbook" value="8" class="bookimg8">
+                    <label for="button8" class="bookimg8">
+                        <img src="~/Content/8.jpg">
+                    </label>
+                    <input type="submit" id="button9" name="clickbook" value="9" class="bookimg9">
+                    <label for="button9" class="bookimg9">
+                        <img src="~/Content/9.jpg">
+                    </label>
+                    <input type="submit" id="button10" name="clickbook" value="10" class="bookimg10">
+                    <label for="button10" class="bookimg10">
+                        <img src="~/Content/10.jpg">
+                    </label>
+                    <input type="submit" id="button11" name="clickbook" value="11" class="bookimg11">
+                    <label for="button11" class="bookimg11">
+                        <img src="~/Content/11.jpg">
+                    </label>
+                    <input type="submit" id="button12" name="clickbook" value="12" class="bookimg12">
+                    <label for="button12" class="bookimg12">
+                        <img src="~/Content/12.jpg">
+                    </label>
+                    <h22>@Session["errmsg"].ToString()</h22>
+                    <img src="~/Content/img3.jpg" class="bottomblock" />
+                    <div class="contactus">
+                        About Us<br />
+                        <a href=http://localhost:10587/Home/Home><p class="subs">Contact Us</p></a>
+                        <a href="http://localhost:10587/Home/TermsAndConditions"><p class="subs">Terms and Conditions</p></a>
+                    </div>
+                    <div class="connect">
+                        Connect<br /><br />
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                        <a href="#" onclick="location.href='http://www.facebook.com'" class="fa fa-facebook"></a>
+                        <a href="#" onclick="location.href='http://www.twiiter.com'" class="fa fa-twitter"></a>
+                        <a href="#" onclick="location.href='http://www.instagram.com'" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </form>
+</body>

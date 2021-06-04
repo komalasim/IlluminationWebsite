@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+} @model  string
+
+<style>
+    table, th, td {
+        border: thin;
+        font-family: 'Berlin Sans FB';
+        font-size: large;
+        border-color: grey;
+        border-spacing: 20px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/DisplayCartStyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container" id="form">
+        <p id="head"></p>
+        <form id="formS" action="../Home/SearchBook" method="post">
+            <p class="searchheading">
+                <input type="text" placeholder="Search Title / Authour" class="search" name='SEARCH' id='SEARCH' required="required" /><span class="error"></span>
+                <input type="submit" name="submitbuttom" id="submitbutton" class="register" value="Search" form="formS" />
+                <label for="submitbutton">
+                    <img src="~/Content/searchicon.png" class="searchicon" />
+                </label>
+            </p>
+        </form>
+    </div>
+    <form method="POST" action="">
+            <div>
+                <h1>Illumination</h1>
+                <img src="~/Content/logo.png" class="logo" />
+                <div class="navbar">
+                    <a href="http://localhost:10587/Home/Home">Home</a>
+                    <a href="http://localhost:10587/Home/RequestaBook">Request A Book</a>
+                    <a href="http://localhost:10587/Home/DisplayCart">View Cart</a>
+                    <a href="http://localhost:10587/Home/FAQ">FAQ</a>
+                    <a href="http://localhost:10587/Home/Recommendations">Recommendations</a>
+                </div>
+                <hr style="color:brown" />
+            </div>
+            <div>
+                @{String mystr = Session["Horror"].ToString();
+
+                String[] divided = new String[100];
+                divided = mystr.Split('|');}
+
+                @{
+                    int i = 0;
+                    String[][] tablediv = new String[100][];
+
+                    while (i < 100 && divided[i] != "")
+                    {
+                        tablediv[i] = divided[i].Split('+');
+                        i++;
+                    }
+                }
+
+                <table>
+
+                    @{
+                        i = 0;
+                        while (i < 100 && tablediv[i] != null)
+                        {
+                            tablediv[i][0] = tablediv[i][0] + ".jpg";
+                            String temp = tablediv[i][0];
+                            tablediv[i][0] = "/Content/" + temp;
+                            <tr>
+                                <td><img src="@tablediv[i][0].ToString()" alt="MyPICS" height="150" width="100" /></td>
+                                <td>
+                                    Title: @tablediv[i][1].ToString()<br />
+                                    Author: @tablediv[i][4].ToString()<br />
+                                    Genre: @tablediv[i][2].ToString() <br />
+                                    Price: @tablediv[i][3].ToString()<br />
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    }
+                </table>
+            </div>
+    </form>
+</body>
+</html>
