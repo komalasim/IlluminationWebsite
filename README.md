@@ -1,5 +1,5 @@
 # Illumination Website
-> Illumination is an online book store application which also allows users to write and view book reviews. This idea was inspired from the Goodreads application and Readings
+> Illumination is an online book store website which also allows users to write and view book reviews. This idea was inspired from the Goodreads application and Readings
 website. We intend to merge the experience of the two platforms hence providing a more convenient environment for both shopping and searching for an ideal book. 
 
 ## Table of Contents
