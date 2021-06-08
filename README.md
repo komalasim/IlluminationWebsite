@@ -13,6 +13,8 @@ website. We intend to merge the experience of the two platforms hence providing 
 ## Technologies Used
 - Visual Studio
 - HTML, CSS, JavaScript and C# Languages
+- Microsoft SQL Server Management Studio
+- SQL Server
 
 ## Features
 - Search books
@@ -26,7 +28,7 @@ website. We intend to merge the experience of the two platforms hence providing 
 - Add book review
 
 ## Setup
-This project requires the installation of Visual Studio and any web browser on the user's device.
+This project requires the installation of Visual Studio, Microsoft SQL Server Management Studio, SQL Server and any web browser on the user's device.
 
 
 ## Usage
