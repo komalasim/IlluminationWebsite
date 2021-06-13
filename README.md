@@ -2,6 +2,7 @@
 > Illumination is an online book store website which also allows users to write and view book reviews. This idea was inspired from the Goodreads application and Readings
 website. We intend to merge the experience of the two platforms hence providing a more convenient environment for both shopping and searching for an ideal book. 
 
+
 ## Table of Contents
 * [Technologies Used](#technologies-used)
 * [Features](#features)
@@ -15,6 +16,7 @@ website. We intend to merge the experience of the two platforms hence providing 
 - Microsoft SQL Server Management Studio
 - SQL Server
 
+
 ## Features
 - Search books
 - Recommendations
@@ -25,6 +27,7 @@ website. We intend to merge the experience of the two platforms hence providing 
 - Shopping cart transactions i.e. checkout
 - Display pop-up ads
 - Add book review
+
 
 ## Setup
 This project requires the installation of Visual Studio, Microsoft SQL Server Management Studio, SQL Server and any web browser on the user's device.
