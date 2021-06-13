@@ -29,6 +29,9 @@ website. We intend to merge the experience of the two platforms hence providing 
 
 ## Setup
 This project requires the installation of Visual Studio, Microsoft SQL Server Management Studio, SQL Server and any web browser on the user's device.
+- https://visualstudio.microsoft.com/downloads/
+- https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
+- https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
 
 ## Usage
